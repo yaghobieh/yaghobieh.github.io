@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>John Yaghobieh</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="indexController.js"></script>
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#nav" ng-controller="controlCenter">
+    <div id="section-topbar">
+        <div id="topbar-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="dropdown">
+                        <ul id="nav" class="nav">
+                            <li class="menu-item" ng-repeat="top_link in top_links"><a class="smoothScroll" href="{{top_link.link}}" title="{{top_link.title}}"><i class="{{top_link.link_icon}}"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1 style="font-size:55px; color:  black;">{{info.name}}</h1>
+                    <img src="{{info.profile_pic}}">
+                    <h3>{{info.position}}</h3>
+                    <h3>{{info.phone}} || {{info.email}}</h3>
+                </div>
+                <!--/.col-lg-12 -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!--/.container -->
+    </div>
+    <!--/.#headerwrap -->
+    <section id="about" name="about"></section>
+    <div id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 col-lg-offset-1">
+                    <h5>About me</h5>
+                    <button class="btn btn-info" ng-click="makeOver()">Resume</button>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <p>{{info.about_me.text}}</p>
+                </div>
+            </div>
+            <!--/.row -->
+        </div>
+        <!--/.container -->
+    </div>
+    <!--/ #intro -->
+    <section id="resume" name="resume"></section>
+    <!--EDUCATION DESCRIPTION -->
+    <div class="container desc">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-repeat="collage in info.collages">
+                <p>
+                    <t><u>college:</u> {{collage.collage}}</t><br/> <u>certificate:</u> {{collage.certificat}} <br/>
+                    <i><u>years:</u> {{collage.years_of_learned}}</i>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-6">
+                    <p>
+                        <t>English</t> fluent <br/>
+                        <t>Hebrew</t> fluent <br/>
+                        <t>Persian</t> fluent <br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/.row -->
+        <br>
+    </div>
+    <!--/.container -->
+    <!--SKILLS DESCRIPTION -->
+    <div id="skillswrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-1">
+                    <h5>My Skills level:</h5>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+                    <canvas id="javascript" height="130" width="130"></canvas>
+                    <p>Javascript/ Jquery</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 600,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+                    <canvas id="bootstrap" height="130" width="130"></canvas>
+                    <p>Bootstrap</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 600,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+                    <canvas id="Angular" height="130" width="130"></canvas>
+                    <p>Angular</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 600,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("Angular").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered col-lg-offset-3">
+                    <canvas id="html" height="130" width="130"></canvas>
+                    <p>HTML5/CSS3</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 600,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+                    <canvas id="NodeJs" height="130" width="130"></canvas>
+                    <p>NodeJs</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 200,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("NodeJs").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+                    <canvas id="illustrator" height="130" width="130"></canvas>
+                    <p>Java</p>
+                    <br>
+                    <script>
+                        var doughnutData = [{
+                            value: 50,
+                            color: "black"
+                        }, {
+                            value: 400,
+                            color: "white"
+                        }];
+                        var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+            </div>
+            <!--/.row -->
+            <p class="centered">{{info.whatIKnow}}</p>
+        </div>
+        <!--/.container -->
+    </div>
+    <section id="work" name="work"></section>
+    <!--EDUCATION DESCRIPTION -->
+    <div class="container desc">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <h5>My works</h5>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <div class="col-lg-3" ng-repeat="work in info.works">
+                <a data-toggle="modal" data-target="#{{work.name}}"><img class="img-responsive works" src="{{work.img_front}}" alt="{{work.name}}"></a>
+                <p><a href="{{work.link}}" class="btn btn-primary">{{work.name}}</a></p>
+				  <div class="modal fade" id="{{work.name}}" role="dialog">
+				  
+				  <!-- Modal content-->
+					<div class="modal-dialog">
+					
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">{{work.name}}</h4>
+						  <img class="img-responsive img-model" src="{{work.img_front}}" alt="{{work.name}}">
+						</div>
+						<!----<div class="modal-body">
+						  <p>Some text in the modal.</p>
+						</div>---->
+						<div class="modal-footer">
+						  <a href="{{work.link}}" target="_blank">Over to the code</a>
+						</div>
+					  </div>
+					  
+					</div>
+				  </div>
+            </div>
+        </div>
+		
+        <br>
+    </div>
+
+    <section id="contact" name="contact"></section>
+    <!--FOOTER DESCRIPTION -->
+    <div id="footwrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-1">
+                    <h5>Contact</h5>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<form class="form-horizontal" role="form" method="post" action="function/sendMail.php">
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label">Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="message" class="col-sm-2 control-label">Message</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="4" name="message"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10 col-sm-offset-2">
+							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10 col-sm-offset-2">
+							<?php echo $result; ?>	
+						</div>
+					</div>
+				</form> 
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p>
+                        <sm>SOCIAL LINKS</sm>
+                    </p>
+                    <p>
+                        <a ng-repeat="beInTouch in info.socialNetworksLinks" href="{{beInTouch.link}}" target="_blank"><i class="{{beInTouch.icon}}"></i></a>
+                    </p>
+                </div>
+            </div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-2">
+				<span>
+					<b>Phone</b>: 054-4481412 
+				</span>
+		    </div>
+            <!--/.row -->
+        </div>
+        <!--/.container -->
+    </div>
+    <!--/ #footer -->
+    <div id="c">
+        <div class="container">
+            <p>Created by <a href="http://www.johnyaghobieh.co.il">John Yaghobieh &reg; {{firstName}}</a></p>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.js"></script>
+</body>
+
+</html>

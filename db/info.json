@@ -1,0 +1,79 @@
+{
+    "name": "John Yaghobieh",
+    "position": "Freelance Web developer",
+    "phone": "0544481412",
+    "email": "yaghobieh@gmail.com",
+    "profile_pic": "https://media.licdn.com/media/AAEAAQAAAAAAAAvzAAAAJDVhNzQzODk0LThjZDMtNDllNi05YmJiLTA5YjZkZWZiMDA4Yw.jpg",
+	
+	"top_links" : [
+
+        {
+            "link_icon": "icon-user",
+            "title": "About",
+            "link": "#about"
+        },
+        {
+            "link_icon": "icon-file",
+            "title": "Resume",
+            "link": "#resume"
+        },
+        {
+            "link_icon": "icon-briefcase",
+            "title": "Work",
+            "link": "#work"
+        },
+        {
+            "link_icon": "icon-envelope",
+            "title": "Contact",
+            "link": "#contact"
+        }
+
+    ],
+	
+	"whatIKnow" : "Spring, JDBC, Hibernate, D3.JS, Express, mongoDB/ mongod, Angular 2, Backbone.js, Less, Django, php, Vue.Js",
+	
+    "about_me": {
+        "text": "I enjoy thinking creatively and outside the box. I'm a hardworking man, quick learner, open minded, technology oriented and hands on kind of guy. My main interests are innovating gadgets, unique apps and different types of sports related technology. I'm a very dynamic individual, always willing to learn and improve myself."
+    },
+
+    "collages": [{
+            "collage": "Affeka",
+            "certificat": "Practical Engineer",
+            "years_of_learned": 2
+        },
+        {
+            "collage": "Eylon High School",
+            "certificat": "Technology document",
+            "years_of_learned": 3
+        }
+    ],
+
+    "works": [{
+            "img_front": "/assets/img/findme.GIF",
+            "link": "https://github.com/yaghobieh/Find-Me-project",
+            "name": "Find- me"
+        },
+        {
+            "img_front": "/assets/img/2eat.GIF",
+            "link": "https://github.com/yaghobieh/Client-webs/tree/master/2eat",
+            "name": "2Eat"
+        },
+        {
+            "img_front": "/assets/img/tovmemir.GIF",
+            "link": "https://github.com/yaghobieh/Client-webs/tree/master/Tov%20memir",
+            "name": "Memir"
+        },
+        {
+            "img_front": "assets/img/flappy-bird.gif",
+            "link": "https://github.com/yaghobieh/Flappy-bird--Java-Ui",
+            "name": "Flappy-bird game"
+        }
+    ],
+	
+	"socialNetworksLinks" : [
+		{ "link" : "http://codepen.io/johnyaghobieh", "icon" : "fa fa-codepen" },
+		{ "link" : "https://github.com/yaghobieh", "icon" : "icon-github" },
+		{ "link" : "https://www.facebook.com/john.yaghobieh", "icon" : "icon-facebook" },
+		{ "link" : "https://www.linkedin.com/in/john-yaghobieh-4baa93107/", "icon" : "icon-linkedin" }
+	]
+}
